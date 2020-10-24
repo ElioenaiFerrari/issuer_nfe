@@ -19,7 +19,6 @@ const {
   COMPANY_EMAIL,
   COMPANY_STATE,
   NOTE_CODE,
-  NOTE_DESCRIPTION,
   NOTE_QUANTITY,
   NOTE_VALUE,
 } = process.env;
@@ -74,7 +73,7 @@ const clear_input = (element) => (element.value = '');
 
       await select_services_provided.select(USER_SERVICE_CODE);
 
-      setTimeout(async () => {
+      await setTimeout(async () => {
         await input_company_cnpj.type(COMPANY_CNPJ, input_typing_params);
         await input_company_name.type(COMPANY_NAME, input_typing_params);
         await input_company_register.type(COMPANY_CNPJ, input_typing_params);
@@ -109,7 +108,7 @@ const clear_input = (element) => (element.value = '');
 
         await button_insert_note.click();
 
-        setTimeout(async () => {
+        await setTimeout(async () => {
           await button_confirm_note.click();
         }, 2000);
       }, 2000);
