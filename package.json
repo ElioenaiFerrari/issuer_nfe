@@ -5,9 +5,11 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "pkg": "^4.4.9",
     "puppeteer": "^5.4.0"
   },
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "build": "pkg src/index.js --options expose-gc"
   }
 }
